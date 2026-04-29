@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Modul 5 - Premium Edition</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Micro-interactions (Senior Touch) -->
+    <style>
+        body { background-color: #f8f9fa; }
+        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .hover-lift:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important; 
+        }
+        .grid-box {
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            font-family: monospace;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Semantic Header -->
+    <header class="bg-white shadow-sm py-4 mb-5">
+        <div class="container text-center">
+            <h1 class="fw-bold text-primary mb-0">Modul 5: Bootstrap Implementation</h1>
+            <p class="text-muted mt-2 mb-0">Engineered with Clean Code Architectur-smnralf
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="container">
+
+        <!-- 2. Bootstrap Grid (Refactored to look like Dashboard Widgets) -->
+        <section class="card shadow-sm border-0 rounded-4 mb-5 hover-lift">
+            <div class="card-body p-4 p-md-5">
+                <h3 class="fw-bold mb-4 border-bottom pb-2">2. Bootstrap Grid System</h3>
+                <div class="row g-3 mb-3"> <!-- Added g-3 for consistent gap -->
+                    <div class="col-12 col-md-8"><div class="grid-box bg-light">.col-12 .col-md-8</div></div>
+                    <div class="col-6 col-md-4"><div class="grid-box">.col-6 .col-md-4</div></div>
+                </div>
+                <div class="row g-3 mb-3">
+                    <div class="col-6 col-md-4"><div class="grid-box">.col-6 .col-md-4</div></div>
+                    <div class="col-6 col-md-4"><div class="grid-box bg-light">.col-6 .col-md-4</div></div>
+                    <div class="col-6 col-md-4"><div class="grid-box">.col-6 .col-md-4</div></div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-6"><div class="grid-box bg-light">.col-6</div></div>
+                    <div class="col-6"><div class="grid-box">.col-6</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Bootstrap Table (Responsive & Modernized) -->
+        <section class="card shadow-sm border-0 rounded-4 mb-5 hover-lift">
+            <div class="card-body p-4 p-md-5">
+                <h3 class="fw-bold mb-4 border-bottom pb-2">3. Data Table</h3>
+                <div class="table-responsive"> <!-- Wrap in responsive div for mobile -->
+                    <table class="table table-hover align-middle border">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col" class="text-center" style="width: 50px;">#</th>
+                                <th scope="col">Nama Lengkap</th>
+                                <th scope="col">Asal Kota</th>
+                                <th scope="col">Umur</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="text-center">1</th>
+                                <td><span class="fw-medium">Budi Rojadi</span></td>
+                                <td>Semarang</td>
+                                <td><span class="badge bg-secondary rounded-pill">35 th</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-center">2</th>
+                                <td><span class="fw-medium">Yulia Santi</span></td>
+                                <td>Bekasi</td>
+                                <td><span class="badge bg-secondary rounded-pill">32 th</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-center">3</th>
+                                <td><span class="fw-medium">Fahri Abdilah</span></td>
+                                <td>Medan</td>
+                                <td><span class="badge bg-secondary rounded-pill">38 th</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4 & 5. Image and Buttons grouped for better layout -->
+        <div class="row g-4 mb-5">
+            <!-- Image -->
+            <div class="col-lg-5">
+                <section class="card shadow-sm border-0 rounded-4 h-100 hover-lift">
+                    <div class="card-body p-4 p-md-5 text-center">
+                        <h3 class="fw-bold mb-4 border-bottom pb-2">4. Image Handling</h3>
+                        <!-- Note: Add cinqueterre.jpg in the same folder -->
+                        <div class="bg-light p-3 rounded-3 mb-3 border">
+                            <img src="cinqueterre.jpg" class="img-fluid rounded shadow-sm" alt="Cinque Terre Thumbnail">
+                        </div>
+                        <small class="text-muted">Applied .img-fluid & .rounded</small>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Buttons -->
+            <div class="col-lg-7">
+                <section class="card shadow-sm border-0 rounded-4 h-100 hover-lift">
+                    <div class="card-body p-4 p-md-5">
+                        <h3 class="fw-bold mb-4 border-bottom pb-2">5. Button States</h3>
+                        <div class="d-flex flex-wrap gap-3 align-items-center">
+                            <button type="button" class="btn btn-secondary px-4 shadow-sm">Secondary</button>
+                            <button type="button" class="btn btn-primary btn-lg px-4 shadow-sm">Primary</button>
+                            <button type="button" class="btn btn-info btn-sm px-3 text-white shadow-sm">Info</button>
+                            <button type="button" class="btn btn-warning px-4 shadow-sm">Warning</button>
+                            <button type="button" class="btn btn-danger px-4 shadow-sm">Danger</button>
+                            <button type="button" class="btn btn-link text-decoration-none">Link</button>
+                            <!-- Full width button put at the bottom -->
+                            <button type="button" class="btn btn-success w-100 mt-2 shadow-sm fw-bold">Success (Full Width)</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- 6. Bootstrap Form (Modern Layout) -->
+        <section class="card shadow-sm border-0 rounded-4 mb-5 hover-lift">
+            <div class="card-body p-4 p-md-5">
+                <div class="row align-items-center">
+                    <div class="col-md-5 mb-4 mb-md-0">
+                        <h3 class="fw-bold mb-2">6. Authentication</h3>
+                        <p class="text-muted">Silakan masukkan kredensial Anda untuk melanjutkan. Form ini menggunakan layout horizontal.</p>
+                    </div>
+                    <div class="col-md-7">
+                        <form action="#" class="bg-light p-4 rounded-4 border">
+                            <div class="row mb-3 align-items-center">
+                                <label for="uname" class="col-sm-3 col-form-label fw-medium">Username</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                                </div>
+                            </div>
+                            <div class="row mb-4 align-items-center">
+                                <label for="pwd" class="col-sm-3 col-form-label fw-medium">Password</label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-9 offset-sm-3">
+                                    <button type="submit" class="btn btn-success px-5 fw-bold shadow-sm">Secure Login</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bootstrap Bundle JS (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery omitted as Bootstrap 5 natively does not require it for these components -->
+
+</body>
+</html>
